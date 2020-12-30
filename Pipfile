@@ -1,0 +1,13 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+ipfshttpclient = "==0.7.0a1"
+aioipfs = "==0.5.2"
+
+[dev-packages]
+
+[requires]
+python_version = "3.8"
