@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 ipfshttpclient = "==0.7.0a1"
 aioipfs = "==0.5.2"
+base58 = "==2.0.1"
 
 [dev-packages]
 
