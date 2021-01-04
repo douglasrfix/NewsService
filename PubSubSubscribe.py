@@ -12,7 +12,7 @@ ipfs_server = ipfshttpclient.connect(timeout=(20.0, 20))
 #while True:
 
 try:
-    with ipfs_server.pubsub.subscribe('PrairieObserver') as subscription:
+    with ipfs_server.pubsub.subscribe('FreeSpeechNewsService') as subscription:
         for message in subscription:
             print(message)
             #print(message['data'])
