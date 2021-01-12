@@ -4,19 +4,19 @@ import datetime
 from watchdog.observers import Observer
 from watchdog.events import LoggingEventHandler
 
-#entrycwd = os.getcwd()
-#os.chdir('/home/douglasrfix/')
-print(datetime.datetime.now())
+entrycwd = os.getcwd()
+os.chdir('/home/douglasrfix/')
+#print(datetime.datetime.now())
 ipfsserver = ipfshttpclient.connect()
-returns = ipfsserver.add('test.json')
-print(returns)
-ipfspath = '/ipfs/'+returns['Hash']
+returned_dictionary = ipfsserver.add('Test.json',pin=True)
+#print(returns)
+ipfspath = '/ipfs/'+ returned_dictionary['Hash']
 ipnsname = ipfsserver.name.publish(ipfspath)
-print(ipnsname)
-ipfsserver.pubsub.publish('FreeSpeechNewsService', str(ipnsname))
+#print(ipnsname)
+ipfsserver.pubsub.publish('IntraGalacticMediaService', str(ipnsname))
 ipfsserver.close()
-#os.chdir(entrycwd)
-print(datetime.datetime.now())
+os.chdir(entrycwd)
+#print(datetime.datetime.now())
 
 
 
